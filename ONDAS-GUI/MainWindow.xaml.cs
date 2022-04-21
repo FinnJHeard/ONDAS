@@ -12,17 +12,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Syncfusion.Windows.Tools.Controls;
 
 namespace ONDAS_GUI
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : RibbonWindow
     {
         public MainWindow()
         {
             InitializeComponent();
+            MainRibbon.LoadRibbonState();
+            _ = MainDock.LoadDockState();
+        }
+
+        private void BtnNewModel_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
